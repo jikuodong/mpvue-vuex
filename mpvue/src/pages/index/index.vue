@@ -1,5 +1,11 @@
 <template>
   <div class="container">
+    <i-notice-bar icon="systemprompt">
+      2018年世界杯,将于6月14日至7月15日举行
+    </i-notice-bar>
+    <i-alert type="warning" show-icon>
+      An warning prompt
+    </i-alert>
     <i-button @click="login" type="success" shape="circle" size="default">登录</i-button>
     <i-button @click="saoma" type="default" shape="circle" size="default">测试扫码</i-button>
     <div class="a">{{ceshi}}</div>

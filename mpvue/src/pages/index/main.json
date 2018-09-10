@@ -3,6 +3,8 @@
   "navigationBarTitleText": "姬阔东代码",
   "enablePullDownRefresh": true,
   "usingComponents": {
-    "i-button": "/static/iview/button/index"
+    "i-button": "/static/iview/button/index",
+    "i-alert": "/static/iview/button/index",
+    "i-notice-bar": "/static/iview/notice-bar/index"
   }
 }
