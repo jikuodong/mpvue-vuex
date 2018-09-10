@@ -1,10 +1,8 @@
 <template>
   <div class="container">
     <i-button @click="login" type="success" shape="circle" size="default">登录</i-button>
-    <i-button @click="ceshi" type="default" shape="circle" size="default">测试</i-button>
-    <div class="a">
-      {{ceshi}}
-    </div>
+    <i-button @click="saoma" type="default" shape="circle" size="default">测试扫码</i-button>
+    <div class="a">{{ceshi}}</div>
   </div>
 </template>
 
@@ -21,14 +19,27 @@ export default {
     ])
   },
   methods: {
-    ceshi1 () {
-      let payload = {
-        vue: this,
-        ceshidata: 2222
-      }
-      this.$store.dispatch('ceshi', payload).then(data => {
-        console.log('rrrrr')
-        console.log(data)
+    saoma () {
+      console.log('1111')
+      wx.scanCode({
+        success: (res) => {
+          console.log(res)
+        }
+      })
+    },
+    // 请求数据 测试模态框
+    login () {
+      console.log('ddd')
+      wx.showModal({
+        title: '提示',
+        content: '这是一个模态弹窗',
+        success: function (res) {
+          if (res.confirm) {
+            console.log('用户点击确定')
+          } else if (res.cancel) {
+            console.log('用户点击取消')
+          }
+        }
       })
     }
   },
