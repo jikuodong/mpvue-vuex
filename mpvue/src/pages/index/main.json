@@ -1,0 +1,8 @@
+{
+  "component": true,
+  "navigationBarTitleText": "姬阔东代码",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "i-button": "/static/iview/button/index"
+  }
+}
